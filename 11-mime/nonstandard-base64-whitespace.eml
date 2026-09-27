@@ -1,0 +1,18 @@
+From: sender@example.invalid
+To: recipient@example.invalid
+Subject: MAIL-GATEWAY-BENIGN-TEST
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="TESTBOUNDARY"
+
+--TESTBOUNDARY
+Content-Type: text/plain
+
+MAIL-GATEWAY-BENIGN-TEST
+--TESTBOUNDARY
+Content-Type: application/octet-stream
+Content-Disposition: attachment; filename="eicar.txt"
+Content-Transfer-Encoding: base64
+
+  WDVPIVAlQEFQWzRcUFpYNTQoUF4pN0ND
+	KTd9JEVJQ0FSLVNUQU5EQVJELUFOVElWSVJVUy1URVNULUZJTEUhJEgrSCo=
+--TESTBOUNDARY--

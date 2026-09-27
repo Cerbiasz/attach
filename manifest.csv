@@ -1,0 +1,146 @@
+id,category,path,sha256,size_bytes,expected,purpose
+BASE-001,baseline,00-baseline/test.txt,6780cd8c54273eed9297a91116adb7a4afc3bdc38be27198841332afff05bb21,25,pass,Benign control file expected to pass ordinary attachment controls
+BASE-002,baseline,00-baseline/test.csv,63df2016014e9e8bf726328c6ca5a678cb693940c6f5cdf850b3f50daca3fade,36,pass,Benign control file expected to pass ordinary attachment controls
+BASE-003,baseline,00-baseline/test.html,a78e0afdbf98e112478bdc65ed57428b94df09c853be1590012c5a4440672340,75,pass,Benign control file expected to pass ordinary attachment controls
+BASE-004,baseline,00-baseline/test.svg,179b110b36a60013d7cca53e59c113c8924dcc215ddd578cb5f0971fdf83ce2f,127,pass,Benign control file expected to pass ordinary attachment controls
+BASE-005,baseline,00-baseline/test.png,431ced6916a2a21a156e38701afe55bbd7f88969fbbfc56d7fe099d47f265460,68,pass,Benign control file expected to pass ordinary attachment controls
+AV-001,antivirus,01-antivirus/eicar.com,275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f,68,block,Standard EICAR antivirus test string
+AV-002,antivirus,01-antivirus/eicar.txt,275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f,68,block,EICAR content with benign-looking text extension
+AV-003,antivirus,01-antivirus/invoice.pdf,275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f,68,block,EICAR content with misleading PDF extension
+AV-004,antivirus,01-antivirus/image.jpg,275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f,68,block,EICAR content with misleading JPEG extension
+EXE-SRC,executable,02-executable/benign.c,15fadee9d8ee1cfe95ec1e373aa591a0a363a0f4140b01a7abab8671eff3ac9f,90,policy-dependent,Source used to build benign executable samples
+EXE-001,executable,02-executable/benign-linux-elf,16ef0d1b74f544866e495164e7bc369a0a93911f96bf2d70267850684bf9b1dd,67712,policy-dependent,Benign Linux ELF executable
+EXE-002,executable,02-executable/benign.exe,716f04af62eff7f94c3221050a6c662793a4e7c9031d987ac71fd35f2d8e6f76,14848,policy-dependent,Benign Windows PE executable
+EXE-003,executable,02-executable/invoice.pdf,716f04af62eff7f94c3221050a6c662793a4e7c9031d987ac71fd35f2d8e6f76,14848,policy-dependent,Windows PE renamed to PDF
+EXE-004,executable,02-executable/image.jpg,716f04af62eff7f94c3221050a6c662793a4e7c9031d987ac71fd35f2d8e6f76,14848,policy-dependent,Windows PE renamed to JPEG
+EXE-005,executable,02-executable/invoice.pdf.exe,716f04af62eff7f94c3221050a6c662793a4e7c9031d987ac71fd35f2d8e6f76,14848,policy-dependent,Double-extension Windows PE
+EXE-006,executable,02-executable/INVOICE.EXE,716f04af62eff7f94c3221050a6c662793a4e7c9031d987ac71fd35f2d8e6f76,14848,policy-dependent,Upper-case executable extension
+F02,executable,02-executable/benign.scr,716f04af62eff7f94c3221050a6c662793a4e7c9031d987ac71fd35f2d8e6f76,14848,policy-dependent,Real benign PE with Windows screensaver extension; tests type and extension policy
+F33,executable,02-executable/no-extension,716f04af62eff7f94c3221050a6c662793a4e7c9031d987ac71fd35f2d8e6f76,14848,policy-dependent,Real benign PE without extension
+F03,executable,02-executable/benign.dll,a69d44cd6f79e6399d4a07a448cbf797f57564cf6f6c8ed796bf3128db1e0afb,11776,policy-dependent,Benign native Windows PE DLL with exported function
+F14-CPL,executable,02-executable/benign.cpl,a69d44cd6f79e6399d4a07a448cbf797f57564cf6f6c8ed796bf3128db1e0afb,11776,policy-dependent,"PE DLL bytes with CPL extension; tests extension and PE detection, not functioning Control Panel applet"
+SCRIPT-001,scripts,03-scripts/test.ps1,bee8716a02ffd3a3476e84daa0b2b73b52237683b191d6fd8f120c3717a89978,40,policy-dependent,Benign script used to test attachment policy and active-content handling
+SCRIPT-002,scripts,03-scripts/test.bat,a406361ccf79a8ac34526881f83841736de260c8c4dae7e0920e701144ef9c85,40,policy-dependent,Benign script used to test attachment policy and active-content handling
+SCRIPT-003,scripts,03-scripts/test.cmd,a406361ccf79a8ac34526881f83841736de260c8c4dae7e0920e701144ef9c85,40,policy-dependent,Benign script used to test attachment policy and active-content handling
+SCRIPT-004,scripts,03-scripts/test.js,eb9de2d7683a5c9e1144632063bf0f7f293a87b0e1763a490219fcbf23b8d230,42,policy-dependent,Benign script used to test attachment policy and active-content handling
+SCRIPT-005,scripts,03-scripts/test.vbs,de5c89e8fc1d210f7a8997bf22e945100b396b749e1745aa8c622e6c638026fa,40,policy-dependent,Benign script used to test attachment policy and active-content handling
+SCRIPT-006,scripts,03-scripts/test.hta,81fe70815e14594f4af9c8cde0ecafef63106fad78171e1df93e3e9a44ca7505,123,policy-dependent,Benign script used to test attachment policy and active-content handling
+SCRIPT-007,scripts,03-scripts/test.sh,fc9b420de5b7efc5efea5d899dda927509b1607c9ed4e650f862d1d9c6617adb,51,policy-dependent,Benign script used to test attachment policy and active-content handling
+SCRIPT-008,scripts,03-scripts/test.py,5c2b784c66218198638c3a1f7cc45429e5ebb9f99aebb418e42a1a47647283ad,34,policy-dependent,Benign script used to test attachment policy and active-content handling
+SCRIPT-009,scripts,03-scripts/test.wsf,27ebee346e735b1c6019e899069a5a263fabdbe0802cd0e72e0557642cf0a881,134,policy-dependent,Benign script used to test attachment policy and active-content handling
+SCRIPT-010,scripts,03-scripts/test.iqy,8d478d35b96f088dd46ad9af038b474a3dc15631e3ba36d3ccac6c5aa7834f1c,31,policy-dependent,Benign script used to test attachment policy and active-content handling
+SHORT-001,shortcuts,04-shortcuts/test.url,048bcae899884a49371f3021bd645a1635d4196f15815a10ff70a3ac1b31ffe5,48,policy-dependent,Benign Windows Internet Shortcut to reserved example.invalid domain
+F14-SCF,shortcuts,04-shortcuts/benign.scf,8d1f0856eb700e2bd064e019fc5ee103f014bf19e75e8d2241609003cf265958,74,policy-dependent,Benign Shell Command File invoking Show Desktop
+OFF-001,office,05-office/plain/test.docx,7913da121847c868bf0514af4abb96cbbc6dbf27de95f5a9cab8a24a67b8be45,947,policy-dependent,Minimal benign OOXML Word document
+OFF-002,office,05-office/container-tests/docx-container-with-eicar.docx,981078a36f7cf7d4b93039d1716723184857df955756eb4b45ae2d2908479fc6,1143,policy-dependent,Valid OOXML container with unreferenced EICAR file under word/embeddings; tests recursive container inspection only
+OFF-EXT-001,office-extension-only,05-office/extension-only/test.docm,7913da121847c868bf0514af4abb96cbbc6dbf27de95f5a9cab8a24a67b8be45,947,policy-dependent,Extension-policy test only; this file does NOT contain VBA and is not a genuine macro-enabled Office document
+OFF-EXT-002,office-extension-only,05-office/extension-only/test.xlsm,7913da121847c868bf0514af4abb96cbbc6dbf27de95f5a9cab8a24a67b8be45,947,policy-dependent,Extension-policy test only; this file does NOT contain VBA and is not a genuine macro-enabled Office document
+OFF-EXT-003,office-extension-only,05-office/extension-only/test.pptm,7913da121847c868bf0514af4abb96cbbc6dbf27de95f5a9cab8a24a67b8be45,947,policy-dependent,Extension-policy test only; this file does NOT contain VBA and is not a genuine macro-enabled Office document
+ARC-001,archives,06-archives/eicar.zip,f628257a38388de67a5f9debef70b39b8988dad780931940d05c6b87762cec26,186,block,ZIP containing EICAR
+ARC-002,archives,06-archives/eicar.tar,640110f4a2bdf1633163f458922be99ce558a3e70fc154e329e6ccb5bb208b2b,10240,block,TAR containing EICAR
+ARC-003,archives,06-archives/eicar.tar.gz,a7715f630a47392924192090cc2f9a2cd818ceccfdac5404df07d5e15e56727e,275,block,TAR.GZ containing EICAR
+ARC-004,archives,06-archives/eicar.7z,5db485ac2ec8e67e863b01860959d2c4c0e06220afacfcad00c49bcb5a6bd755,194,block,7z archive containing EICAR
+ENC-001,encrypted,07-encrypted/eicar-password.zip,848d575b8effaeb0611ce996fe2b3cd9c8da5b6b9fb199b71d1da58ce506b5c8,264,policy-dependent,Password-protected ZIP containing EICAR; password is documented in README
+ENC-002,encrypted,07-encrypted/eicar-password.7z,23baf2dba532118b9c1bd8b931c976510dae1e210b01b4416f171e81aa761fc6,270,policy-dependent,Password-protected 7z containing EICAR; password is documented in README
+NEST-01,nested,08-nested/level-01.zip,f628257a38388de67a5f9debef70b39b8988dad780931940d05c6b87762cec26,186,block,Nested ZIP chain ending in EICAR; depth 1
+NEST-02,nested,08-nested/level-02.zip,15aa918cda1336b917f7f0b8ecc104ffc2b642170629be15178274adfa2806c1,261,block,Nested ZIP chain ending in EICAR; depth 2
+NEST-03,nested,08-nested/level-03.zip,752787585716e5946997cb65917176d634545cef6eabbdc090e52112291e7bda,339,block,Nested ZIP chain ending in EICAR; depth 3
+NEST-04,nested,08-nested/level-04.zip,3bcb6cdcf0140c8a20b77f4e1afd5caf8742655d027fb4c9a77a2adddfe754de,423,block,Nested ZIP chain ending in EICAR; depth 4
+NEST-05,nested,08-nested/level-05.zip,a7424c0cbb6c0f18ba0ce960eb4a4d6d7ec90c8bff825e6af6b88b22fc3c2504,515,block,Nested ZIP chain ending in EICAR; depth 5
+NEST-06,nested,08-nested/level-06.zip,a70eb6c640f779c32952782f549b40804dde7d31398367abf0c3c4762ba128d3,612,block,Nested ZIP chain ending in EICAR; depth 6
+NEST-07,nested,08-nested/level-07.zip,04cfa6d4910d21bba611f40f49b2ba20017121a77c5ab78aaa8bd10b9a458db2,719,block,Nested ZIP chain ending in EICAR; depth 7
+NEST-08,nested,08-nested/level-08.zip,1e66920d054c075afcece1456967619e9f1cd457e9c4ef93f217ff28d0d424f8,831,block,Nested ZIP chain ending in EICAR; depth 8
+NEST-09,nested,08-nested/level-09.zip,6c2e97a483999830101fd2865c5f5e9a40279328aa41594dccb906923d34e157,952,block,Nested ZIP chain ending in EICAR; depth 9
+NEST-10,nested,08-nested/level-10.zip,ac0c69ec8a8a0c2792e3bd19285165deb0cbae8f961921e2aba0e78c1fbc002d,1070,block,Nested ZIP chain ending in EICAR; depth 10
+WEB-001,web,09-web/link.html,726570c59e54cebee14a2d741276a2b321a42e26fca0da2b7361437eccae2411,137,policy-dependent,HTML attachment with benign reserved-domain hyperlink
+WEB-002,web,09-web/blob-download.html,89b071168f2af10e3a45a73640b4f5e62d1d9b7f02dd38e6b152e0b4c26448d4,327,policy-dependent,Benign HTML/JavaScript Blob download of a text file; tests HTML-smuggling-style detection without executable payload
+WEB-003,web,09-web/link.svg,2214e73027573c9957142869564e27503d151bb838d7e5826545e3c5358fd9ac,217,policy-dependent,SVG with benign hyperlink
+WEB-004,web,09-web/script.svg,6be457b282b20eb7f4cac2ae6606f2243ff029b123b1d49871ee9565e7a55f4d,263,policy-dependent,SVG with benign JavaScript modifying local text only
+PDF-001,pdf,10-pdf/pdf-with-url.pdf,ae4eb6f39dd1ec70c7d4a945bb5f89770fdcf5478fb43fe969c45113aabcb33c,807,policy-dependent,Minimal valid PDF with benign URI annotation
+PDF-002,pdf,10-pdf/qr-benign.png,5677ffe4b9c15b2d1447a7c3e99b0bb3e9ee326e9d8276a3961a21d0c4bddb34,563,policy-dependent,QR code resolving to reserved example.invalid domain
+PDF-003,pdf,10-pdf/pdf-with-qr.pdf,1e37b41a74e60d657f04db2e812c0f683b2a933a08ead5b62b29d22726922783,15028,policy-dependent,PDF containing benign QR code
+MIME-001,mime,11-mime/svg-as-text-plain.eml,8b28c79ceed702a07c9f3480042550ce25630e3c431f0864797b406806771008,875,policy-dependent,SVG attachment declared as text/plain
+MIME-002,mime,11-mime/eicar-as-pdf.eml,59e03a938508c6d40ac410e287341337d0c55aac7a7fbbe0770db24981af30d2,669,policy-dependent,EICAR attachment declared as application/pdf and named invoice.pdf
+MIME-003,mime,11-mime/duplicate-filename.eml,e7dd84d6297e9a9a5a720784f9e83457103d6676c71e2e33040cd80c6512fbf9,901,policy-dependent,Two attachments share the same filename but contain different content
+MIME-004,mime,11-mime/eicar-no-filename.eml,54c1f97a2ae8832336087ba80659c265da2a5254b2591012cdf2fe9312b06940,660,policy-dependent,EICAR attachment without a filename parameter
+MIME-005,mime,11-mime/outer-with-attached-eml.eml,3f2a699aa1ecb4ddc60f9d499df11a0afa6f69d90387828f5dbe7cc3952037c5,1480,policy-dependent,Nested message/rfc822 containing EICAR
+NAME-001,filename,12-filename/invoice...exe,6780cd8c54273eed9297a91116adb7a4afc3bdc38be27198841332afff05bb21,25,policy-dependent,Benign content with suspicious or normalization-sensitive filename
+NAME-002,filename,12-filename/invoice․exe,6780cd8c54273eed9297a91116adb7a4afc3bdc38be27198841332afff05bb21,25,policy-dependent,Benign content with suspicious or normalization-sensitive filename
+NAME-003,filename,12-filename/invoice．exe,6780cd8c54273eed9297a91116adb7a4afc3bdc38be27198841332afff05bb21,25,policy-dependent,Benign content with suspicious or normalization-sensitive filename
+NAME-004,filename,12-filename/Invoice.ExE,6780cd8c54273eed9297a91116adb7a4afc3bdc38be27198841332afff05bb21,25,policy-dependent,Benign content with suspicious or normalization-sensitive filename
+NAME-005,filename,12-filename/INVOICE.EXE,6780cd8c54273eed9297a91116adb7a4afc3bdc38be27198841332afff05bb21,25,policy-dependent,Benign content with suspicious or normalization-sensitive filename
+NAME-006,filename,12-filename/invoice‐2026.pdf,6780cd8c54273eed9297a91116adb7a4afc3bdc38be27198841332afff05bb21,25,policy-dependent,Benign content with suspicious or normalization-sensitive filename
+NAME-007,filename,12-filename/invoice.pdf........exe,6780cd8c54273eed9297a91116adb7a4afc3bdc38be27198841332afff05bb21,25,policy-dependent,Benign content with suspicious or normalization-sensitive filename
+NAME-008,filename,12-filename/invoice .exe,6780cd8c54273eed9297a91116adb7a4afc3bdc38be27198841332afff05bb21,25,policy-dependent,Benign content with suspicious or normalization-sensitive filename
+NAME-009,filename,12-filename/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.exe,6780cd8c54273eed9297a91116adb7a4afc3bdc38be27198841332afff05bb21,25,policy-dependent,Benign content with suspicious or normalization-sensitive filename
+NAME-010,filename,12-filename/invoice.pdf.exe,6780cd8c54273eed9297a91116adb7a4afc3bdc38be27198841332afff05bb21,25,policy-dependent,Benign content with suspicious or normalization-sensitive filename
+PARSE-001,parser,13-parser/zip-with-trailing-junk.zip,974bde94e19df946a5c32bafab4c077df0327637497869c7d6dd8b8d8758cc50,214,block,Valid ZIP followed by extra trailing bytes
+PARSE-002,parser,13-parser/png-plus-zip.png,35a890b41c7d8ad0bcfc2b00f640b2e3dd90aa223292c3dd543a244ffede1bad,254,block,PNG concatenated with ZIP; parser-dependent dual-format/leading-data test
+PARSE-003,parser,13-parser/png-plus-zip.zip,35a890b41c7d8ad0bcfc2b00f640b2e3dd90aa223292c3dd543a244ffede1bad,254,block,Same concatenated PNG+ZIP bytes with ZIP extension
+PARSE-004,parser,13-parser/truncated-eicar.zip,8768e212f52aca2b62ea22b21d417b729e3c32af71e63d9813652e9583ff4f26,178,block,Deliberately truncated ZIP for parser-error handling; not guaranteed to open
+LIMIT-001,resource-limits,14-resource-limits/many-files-250.zip,cc83c971ba26daccd6860919d5b597e93eb1196b6ec3aae22b8399b07a820761,35772,policy-dependent,ZIP with many benign small files; bounded file-count limit test
+LIMIT-002,resource-limits,14-resource-limits/high-compression-20MB.zip,cb755e976608f4a47e2b9ddf93db478ce8df0873f2f88917b4fa12807deafe3c,20513,policy-dependent,Bounded high-compression-ratio ZIP; not a decompression bomb
+F61,archives,06-archives/eicar.com.gz,da1e474dfc3c65a6ee870b795e05f4b10d09617d8dc93f6db355da5c738ad117,98,block,Standalone GZIP stream containing EICAR
+F55-test.ps1,archives,06-archives/script-test.ps1.zip,8525595892e29472f06b0670757ba537c532640aac1d5bd7116a4954c516e4ef,156,block,ZIP with benign script test.ps1
+F55-test.js,archives,06-archives/script-test.js.zip,b6c1cabcba9f3dc5cf45d520e53c18e2828970a5a37e50e5690c917ddf66181e,156,block,ZIP with benign script test.js
+F55-test.vbs,archives,06-archives/script-test.vbs.zip,d58f0342e46bc43f8614d83696e0e143ab4e775753b26e4d42a58779f01391a3,156,block,ZIP with benign script test.vbs
+F69,archives,06-archives/pdf-and-eicar.zip,6164b13ff8091f7cf017047904f9ce60b4a394ef1a53065863530ab52807acfc,710,block,ZIP with valid PDF and EICAR in separate entries
+F70,archives,06-archives/deep-tree.zip,0572154d749f5cd4de9a51f13dd0a7f1ade902b78b06c1c4c3aaeea33dacd845,282,block,ZIP with 24 nested directories ending in EICAR
+F53,archives,06-archives/benign-pe.zip,fc2f3170bf4b7fe6ea1abe6d466faa02bca60508120d76064e6427fe704ef801,6005,block,ZIP with real benign Windows PE
+F65,nested,08-nested/zip-zip-benign-pe.zip,6b5a637f1d3d40f85051d3f327e1841282645e79003a2b554688f3e8193b52d3,6126,block,ZIP containing ZIP containing benign Windows PE
+F102,nested,08-nested/eml-zip-eicar.eml,3c7a6a356a6d0e5ae70e662f9e094fceba4b57b3307806fb5db9c13715821dd0,816,block,EML with ZIP attachment containing EICAR
+F108,nested,08-nested/zip-eml-eicar.zip,04d127ffa83a5d625597adb6a5df791f2d2edef797b75d1e05e12febda90c8b4,507,block,ZIP with EML containing EICAR
+F108-ZEZ,nested,08-nested/zip-eml-zip-eicar.zip,8c7a69fec15bca235eb298bff2b3f774a1d2a974807426e7f5204011082e8163,591,block,ZIP with EML with ZIP containing EICAR
+F101,nested,08-nested/eml-benign-pe.eml,c7cd98918ef113147032bf08659242ec3f37025368aa6c824eb33ee0d98228dd,20886,block,EML with benign Windows PE attachment
+F22,office,05-office/plain/test.rtf,5e49e94eeee6e7984f97ca23940002249dbde6760ac69f6bf948d6a0c12a4c18,37,policy-dependent,Valid minimal benign RTF
+F13,archives,06-archives/benign.jar,cfad8d7412d3b7f91a6742d8aff2db120417fac9cbcd609d617fcc2c2f14dee9,338,block,Valid JAR archive structure with manifest and benign text; no Java executable class
+F106,office,05-office/container-tests/docx-container-with-zip.docx,1a0a4b1fc004a33cbeaa133cef3f2526b22966e5ee8c2eb2722b107b53e619f3,1216,policy-dependent,"OOXML ZIP with unreferenced embedded ZIP; recursive inspection only, not clickable OLE object"
+F25,office,05-office/container-tests/docx-with-external-link.docx,e336bc36b4d18f782a6500c17c14a6f523e26afba2812376831b55b76998d3ea,1335,policy-dependent,Valid DOCX with an external hyperlink relationship to a reserved domain; not an auto-fetching object
+F32,office,05-office/container-tests/pdf-named-docx.docx,ae4eb6f39dd1ec70c7d4a945bb5f89770fdcf5478fb43fe969c45113aabcb33c,807,policy-dependent,Actual PDF bytes with DOCX extension; file-type detection test
+F88,web,09-web/redirect.html,3d50c53cdc0629a9b02d131bcec74ff76dfaaea5b86da22590c761567de57fbb,83,policy-dependent,HTML meta refresh to reserved example.invalid domain
+F95,web,09-web/base64-blob.html,30dfdd3fcc0b2da0f87e19727b5a61617d6bf3f5f8b89a4fa6e437883cec967f,287,policy-dependent,Base64 plus Blob creates only benign TXT
+F91,web,09-web/base64-link.svg,56d074efc385d3f7bfd91eb87ffd1bdf2572290a36fba513cfa711e15a973997,183,policy-dependent,SVG with inline Base64 benign text data URI
+F100,web,09-web/external-resource.svg,814671f269c7d14024c717b3de10a91412bfa9aa6bd2a0e4ba89ca12464defea,141,policy-dependent,SVG with external image reference to reserved domain; no callback expected
+F99,web,09-web/foreign-object.svg,de98588229b1d826ec3a4a1b4e34723363e02ff1fdece3736e221a2df1b46dca,197,policy-dependent,SVG foreignObject with harmless HTML fragment
+F131,web,09-web/js-navigation.svg,f395c6c87de34c93c80de5f277adc7054218f6561db5af58e0ad36f476ca85cb,227,policy-dependent,SVG click handler navigating only to reserved domain
+F97,web,09-web/link-to-html.svg,3a18b5b8de2093da80812b1c7bc05f10d626eac13e4e0bb0adda344931797d14,166,policy-dependent,SVG hyperlink to reserved HTML URL
+F98,web,09-web/encoded-text-js.svg,855f9a9e772c0854c378df49f48b70c42b7e443bf11dc7798705415dc7ce5961,206,policy-dependent,SVG with benign numeric encoded JavaScript text assignment
+F41,mime,11-mime/pe-as-jpeg.eml,761c52654e3da189328859e3bde45b40fe9afabae434180f85b2b8cc4fac3480,20479,policy-dependent,PE bytes declared JPEG
+F43,mime,11-mime/pe-as-octet-stream.eml,f126bf3781a851943c78e1b220fc099a55d201bdd9d8adea08cdc9a9810ca6fb,20493,policy-dependent,PE bytes declared octet-stream
+F44,mime,11-mime/different-name-and-filename.eml,a7e60defe9e0cfc6f861e08e36268b28dad9618dd9f3d2467b78dffed8e9ef00,20489,policy-dependent,Contradictory name and filename parameters
+F45,mime,11-mime/filename-rfc2047.eml,a82783cf5dc202859605467e7f78216332b49a2163060d665bd61b29ca9e7801,462,policy-dependent,Encoded-word filename in quoted parameter; nonstandard parser differential
+F46,mime,11-mime/filename-rfc2231.eml,2a2ac4002334b5cc8f7544ab9516b4f73441b2254908b35d301d74da7a6c2d1a,455,policy-dependent,RFC2231 extended filename parameter
+F49,mime,11-mime/quoted-printable.eml,71417e0a998812f79192a010867c1e2e23269a5c8c18e060d2b084dd1cbac66d,495,policy-dependent,Quoted-printable transfer encoding of EICAR bytes
+F52,mime,11-mime/duplicate-content-type.eml,cbfd50a4cf803d5025af802888f1418c278e8ec07370dfc1f5d6c377c9a465f0,508,policy-dependent,Duplicate conflicting Content-Type headers in one part
+F47,mime,11-mime/folded-base64.eml,152c8e06b0cbefac9a316514a26d49611ac4cd1f079537c107c0c7870ab78d44,504,policy-dependent,EICAR Base64 attachment with standard folded lines
+F48,mime,11-mime/nonstandard-base64-whitespace.eml,1e1332510b57e933f0b939045cb6aa1dc0965c9559b70b205f9f4d8849bd2fe4,508,policy-dependent,Base64 split at byte boundary with whitespace; deliberately nonstandard parser differential
+F42,mime,11-mime/pe-as-pdf.eml,e3502beea0a1bde6c1b12dc1e1f393d92389fdf2a8aace67c1fb31dddc0ff584,20484,policy-dependent,Real PE declared PDF and named invoice.pdf
+F50,mime,11-mime/nested-multipart.eml,896b341ad7922dc9521c977734a424148e0a13d64d21d8d5332aebb41258014d,1011,policy-dependent,multipart/mixed containing multipart/alternative and EICAR attachment
+F78,mime,11-mime/password-in-subject.eml,86b320d45a9958cab3c371678a852c939cbdabf2f218ddc087b73ad16b29e600,926,policy-dependent,"Password protected ZIP, password in subject"
+F79,mime,11-mime/password-in-body.eml,f87fdb271937ef5ea908610a8702d67b9bbf6f4be3d8aefee90a789fe31d49d6,926,policy-dependent,"Password protected ZIP, password in body"
+F80,encrypted,07-encrypted/password-in-image.png,6d295a87908425b3953ced22e3c70385a0ca2dcbd18064b82f0126ca9dc446cf,1709,policy-dependent,PNG containing visible password text; use with the encrypted ZIP
+F38/39,filename,12-filename/right-to-left-override-‮exe.pdf,6780cd8c54273eed9297a91116adb7a4afc3bdc38be27198841332afff05bb21,25,policy-dependent,Filename normalization on Unix; Windows/Outlook may change or reject name
+F38/39,filename,12-filename/ending-dot.exe.,6780cd8c54273eed9297a91116adb7a4afc3bdc38be27198841332afff05bb21,25,policy-dependent,Filename normalization on Unix; Windows/Outlook may change or reject name
+F38/39,filename,12-filename/ending-space.exe ,6780cd8c54273eed9297a91116adb7a4afc3bdc38be27198841332afff05bb21,25,policy-dependent,Filename normalization on Unix; Windows/Outlook may change or reject name
+F29/35,filename,12-filename/faktura.pdf.docx.exe,716f04af62eff7f94c3221050a6c662793a4e7c9031d987ac71fd35f2d8e6f76,14848,policy-dependent,Benign Windows PE with deceptive/long filename
+F29/35,filename,12-filename/long-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.exe,716f04af62eff7f94c3221050a6c662793a4e7c9031d987ac71fd35f2d8e6f76,14848,policy-dependent,Benign Windows PE with deceptive/long filename
+F138,mime,11-mime/combined-filename-mime.eml,5a5a8cc41b9120f34d8a118be1a38b4d4ee7d5de583082d8bb1edecd91856152,20482,policy-dependent,"Combined PE, MIME mismatch, Unicode fullwidth dot, double extension, conflicting name"
+F116,parser,13-parser/duplicate-zip-entry.zip,df3a59a6d9da2e630e392e2e9e037a7f5943a59af851da47fc19fd5fd89beaf8,299,block,Two ZIP entries with identical names and different content
+F117,parser,13-parser/case-differing-zip-entry.zip,fe7ef41e00b1600948d4bcd789faa3e8287db998f303480997f774c4ec886f13,307,block,ZIP with case variant filenames
+F118,parser,13-parser/unicode-zip-entry.zip,792a066763eeda5038d3a560f92cd4a826e34b646bb4f985ff0f20f755fa2fb4,194,block,Unicode fullwidth dot in ZIP entry filename
+F115,parser,13-parser/zip-local-central-name-disagreement.zip,a3dd62c8c87949062a614026068881ca05a483e64b4f01e53d678802db620a3f,184,block,ZIP with local header name evil.exe but central directory name safe.txt; intentionally inconsistent
+F109,parser,13-parser/pdf-plus-zip.pdf,8c9c0a64a442f0cf36eee12472be747dafe07310b0cd5d6e6d4046099bd9eb45,993,block,Valid leading format plus ZIP bytes; ZIP recognition is parser-dependent
+F111,parser,13-parser/gif-plus-zip.gif,c858b4d2dc3deb4ed4948288b4b53cd867dd179388f9ab42092fbd161d57bb91,212,block,Valid leading format plus ZIP bytes; ZIP recognition is parser-dependent
+F110,parser,13-parser/jpeg-plus-zip.jpg,183005456ac04f1d2024b04cb1058995eb79c72982b3462eecb0120f26b59cf7,817,block,Valid JPEG bytes plus ZIP bytes; ZIP recognition is parser-dependent
+F93,pdf,10-pdf/qr-benign.jpg,d339f92c61e1dddb4f4eea5e72c076adc669915824cd82369f43c5ccfe766460,14121,policy-dependent,JPEG with benign QR code
+F122,resource-limits,14-resource-limits/standalone-20MB.bin,d69fa2383e3c2a6a8f23f98b173e89d108cb87a42980c4c645d74d1220fc18cb,20971520,policy-dependent,"Bounded standalone attachment, size controlled by COMPRESS_MB"
+F10,shortcuts,04-shortcuts/benign-notepad.lnk,133b10e7b57acc8d4de2a70e21bb240d3d04871f0676b70c5150f86ce211a2db,169,policy-dependent,Native Shell Link with LinkInfo pointing to Windows Notepad; no arguments or network destination
+F84,pdf,10-pdf/embedded-benign.txt.pdf,bea73e1ff0fd41fe9ab0817d8adc64e413ef880ea931d5bd95a2d7912dffd6e9,714,policy-dependent,PDF with actual EmbeddedFiles name tree and a benign TXT attachment
+F85,pdf,10-pdf/acroform.pdf,73fe9335319dbf45b22ef7a8664387731f6a3236f1403a92a0898eb81c6f4fae,663,policy-dependent,PDF with a benign AcroForm text field
+F105,pdf,10-pdf/embedded-eicar.zip.pdf,4e725b6db7dd7ca2bd8a23729cb5dde9302e696b338d7ab0beb5c512c61f6e6f,1041,policy-dependent,PDF with real EmbeddedFiles ZIP attachment containing EICAR
+F68-PART,nested,08-nested/zip-in-7z.7z,b0c7b01d6197e0459751c5aa0e7aeff03165c1860a29235ae4d7c3de1c57aeb4,273,block,7z containing ZIP containing EICAR; no RAR layer
+F137-PART,nested,08-nested/encrypted-outer.zip,ee068a8feea83ca86505c9f68ba3876e5b1e3b4c0ee1e2cb09a218afcccfcb49,463,block,Encrypted ZIP containing unencrypted nested ZIP ending in EICAR
+F75,nested,08-nested/encrypted-in-encrypted.zip,70f50f2bae4d8fac7241172527e536f27472cc3daf7403115b859e0ea6d0968e,478,block,Encrypted ZIP containing encrypted ZIP containing EICAR
+F54,archives,06-archives/zip-with-lnk.zip,c921066240eb40b81e4716c9d834287a2a19de51aa0ebd7044d3fae0fd2cbb2e,267,block,ZIP containing a benign Notepad Shell Link
+F127,nested,08-nested/encrypted-zip-with-lnk.zip,0d50f69c4766170967cce98c4a1b908b09af57c4e92fa215d92f2e17e6a44aea,295,block,Encrypted ZIP containing a benign Notepad Shell Link
+F133,nested,08-nested/eml-zip-lnk.eml,28c5d60fbe5bdb52a4575fc333afb6e8f99dc6e3f52d4c2724afa62878fc888d,937,block,EML containing ZIP containing a benign Notepad Shell Link

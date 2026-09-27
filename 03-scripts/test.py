@@ -1,0 +1,1 @@
+print("MAIL-GATEWAY-BENIGN-TEST")

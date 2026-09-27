@@ -1,0 +1,2 @@
+@echo off
+echo MAIL-GATEWAY-BENIGN-TEST

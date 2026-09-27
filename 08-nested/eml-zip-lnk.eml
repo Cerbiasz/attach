@@ -1,0 +1,25 @@
+From: sender@example.invalid
+To: recipient@example.invalid
+Subject: Benign ZIP LNK test
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============5834549211504442115=="
+
+--===============5834549211504442115==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+MAIL-GATEWAY-BENIGN-TEST
+
+--===============5834549211504442115==
+Content-Type: application/zip
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="zip-with-lnk.zip"
+MIME-Version: 1.0
+
+UEsDBBQAAAAIAO2ZO12RfZrJUQAAAKkAAAASABwAYmVuaWduLW5vdGVwYWQubG5rVVQJAAMuT7lq
+Lk+5anV4CwABBOgDAAAE6AMAAPNhYGBgFGFiAIEDYJLBrQlIKDAQBoxo/EggloGKg2hdqLgvEAsC
+MTOULwAinK1iwjPzUvLLi2OCK4tLUnONjWLy8ktSCxJT9FIrUhmQ2SAAAFBLAQIeAxQAAAAIAO2Z
+O12RfZrJUQAAAKkAAAASABgAAAAAAAAAAAC0gQAAAABiZW5pZ24tbm90ZXBhZC5sbmtVVAUAAy5P
+uWp1eAsAAQToAwAABOgDAABQSwUGAAAAAAEAAQBYAAAAnQAAAAAA
+
+--===============5834549211504442115==--

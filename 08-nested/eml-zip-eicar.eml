@@ -1,0 +1,24 @@
+From: sender@example.invalid
+To: recipient@example.invalid
+Subject: INNER ZIP EICAR
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============4397228119622116538=="
+
+--===============4397228119622116538==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+MAIL-GATEWAY-BENIGN-TEST
+
+--===============4397228119622116538==
+Content-Type: application/zip
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="eicar.zip"
+MIME-Version: 1.0
+
+UEsDBBQAAAAIAOyZO108z1FoRgAAAEQAAAAJAAAAZWljYXIuY29tizD1VwxQdXAMiDaJCYiKMDXR
+CIjTNHd21jSvVXH1dHYM0g0OcfRzcQxy0XX0C/EM8wwKDdYNcQ0O0XXz9HFVVPHQ9tACAFBLAQIU
+AxQAAAAIAOyZO108z1FoRgAAAEQAAAAJAAAAAAAAAAAAAAC0gQAAAABlaWNhci5jb21QSwUGAAAA
+AAEAAQA3AAAAbQAAAAAA
+
+--===============4397228119622116538==--

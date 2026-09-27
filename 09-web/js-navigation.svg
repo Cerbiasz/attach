@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="70"><script><![CDATA[
+function go() { window.location.href = "https://example.invalid/"; }
+]]></script><text x="8" y="40" onclick="go()">Open reserved URL</text></svg>

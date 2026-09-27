@@ -1,0 +1,7 @@
+<!doctype html><script>
+const b = atob("TUFJTC1HQVRFV0FZLUJFTklHTi1URVNU");
+const a = document.createElement("a");
+a.href = URL.createObjectURL(new Blob([b], {type:"text/plain"}));
+a.download = "benign.txt"; a.textContent = "Download benign text";
+document.body.appendChild(a);
+</script>

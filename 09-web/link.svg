@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="180">
+  <text x="20" y="50">MAIL-GATEWAY-BENIGN-TEST</text>
+  <a href="https://example.invalid/"><text x="20" y="100">Open benign test URL</text></a>
+</svg>

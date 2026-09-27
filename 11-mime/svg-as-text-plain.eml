@@ -1,0 +1,24 @@
+From: sender@example.invalid
+To: recipient@example.invalid
+Subject: TEST SVG declared as text/plain
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============7837536176693407003=="
+
+--===============7837536176693407003==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+MAIL-GATEWAY-BENIGN-TEST
+
+--===============7837536176693407003==
+Content-Type: text/plain
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="voicemail.svg"
+MIME-Version: 1.0
+
+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NDAiIGhlaWdo
+dD0iMTgwIj4KICA8dGV4dCB4PSIyMCIgeT0iNTAiPk1BSUwtR0FURVdBWS1CRU5JR04tVEVTVDwv
+dGV4dD4KICA8YSBocmVmPSJodHRwczovL2V4YW1wbGUuaW52YWxpZC8iPjx0ZXh0IHg9IjIwIiB5
+PSIxMDAiPk9wZW4gYmVuaWduIHRlc3QgVVJMPC90ZXh0PjwvYT4KPC9zdmc+Cg==
+
+--===============7837536176693407003==--

@@ -1,0 +1,17 @@
+From: sender@example.invalid
+To: recipient@example.invalid
+Subject: MAIL-GATEWAY-BENIGN-TEST
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="TESTBOUNDARY"
+
+--TESTBOUNDARY
+Content-Type: text/plain
+
+MAIL-GATEWAY-BENIGN-TEST
+--TESTBOUNDARY
+Content-Type: text/plain; name="sample.txt"
+Content-Disposition: attachment; filename="sample.txt"
+Content-Transfer-Encoding: quoted-printable
+
+X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*
+--TESTBOUNDARY--

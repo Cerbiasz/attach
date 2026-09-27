@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="180">
+  <text id="msg" x="20" y="60">MAIL-GATEWAY-BENIGN-TEST</text>
+  <script><![CDATA[
+    document.getElementById('msg').textContent = 'MAIL-GATEWAY-BENIGN-ACTIVE-CONTENT-TEST';
+  ]]></script>
+</svg>

@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="70"><text id="t" x="8" y="40">Test</text><script><![CDATA[
+document.getElementById('t').textContent=String.fromCharCode(79,75);
+]]></script></svg>

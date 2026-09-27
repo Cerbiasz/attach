@@ -1,0 +1,10 @@
+<!doctype html><html><body>
+<script>
+const blob = new Blob(["MAIL-GATEWAY-BENIGN-TEST\n"], {type: "text/plain"});
+const a = document.createElement("a");
+a.href = URL.createObjectURL(blob);
+a.download = "mail-gateway-test.txt";
+a.textContent = "Download benign test file";
+document.body.appendChild(a);
+</script>
+</body></html>

@@ -1,0 +1,1 @@
+Write-Output "MAIL-GATEWAY-BENIGN-TEST"

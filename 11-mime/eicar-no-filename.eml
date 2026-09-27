@@ -1,0 +1,22 @@
+From: sender@example.invalid
+To: recipient@example.invalid
+Subject: TEST attachment with no filename
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============0525634231969231816=="
+
+--===============0525634231969231816==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+MAIL-GATEWAY-BENIGN-TEST
+
+--===============0525634231969231816==
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+MIME-Version: 1.0
+Content-Disposition: attachment
+
+WDVPIVAlQEFQWzRcUFpYNTQoUF4pN0NDKTd9JEVJQ0FSLVNUQU5EQVJELUFOVElWSVJVUy1URVNU
+LUZJTEUhJEgrSCo=
+
+--===============0525634231969231816==--

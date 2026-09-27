@@ -1,0 +1,30 @@
+From: sender@example.invalid
+To: recipient@example.invalid
+Subject: TEST duplicate attachment filename
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============7387942362305156589=="
+
+--===============7387942362305156589==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+MAIL-GATEWAY-BENIGN-TEST
+
+--===============7387942362305156589==
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="invoice.pdf"
+MIME-Version: 1.0
+
+TUFJTC1HQVRFV0FZLUJFTklHTi1URVNUCg==
+
+--===============7387942362305156589==
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="invoice.pdf"
+MIME-Version: 1.0
+
+WDVPIVAlQEFQWzRcUFpYNTQoUF4pN0NDKTd9JEVJQ0FSLVNUQU5EQVJELUFOVElWSVJVUy1URVNU
+LUZJTEUhJEgrSCo=
+
+--===============7387942362305156589==--

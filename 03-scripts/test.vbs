@@ -1,0 +1,1 @@
+WScript.Echo "MAIL-GATEWAY-BENIGN-TEST"

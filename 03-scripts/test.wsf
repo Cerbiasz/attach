@@ -1,0 +1,1 @@
+<?xml version="1.0"?><job id="benign"><script language="JScript"><![CDATA[WScript.Echo("MAIL-GATEWAY-BENIGN-TEST");]]></script></job>
